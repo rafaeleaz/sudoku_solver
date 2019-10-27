@@ -27,4 +27,12 @@ Knowing these preliminaries, let us list the steps which we can follow to solve 
 
 6. Repeat steps 2-5 until either the puzzle is solved or none of them can produce a new answer or eliminate pencil marks.
 
-And that's it (hopefully)! If this algorithm cannot solve a certain puzzle, then it would also stump me :( Furthermore, any puzzle solved by this method is guaranteed to have a unique answer! This is because we only ever make a move if there is no possible way that the move is incorrect. Therefore, this also works as a (perhaps somewhat rudimentary) way of checking that a puzzle has a unique solution.
+And that's how it works (hopefully)! If this algorithm cannot solve a certain puzzle, then it would also stump me :( Furthermore, any puzzle solved by this method is guaranteed to have a unique answer! This is because we only ever make a move if there is no possible way that the move is incorrect. Therefore, this also works as a (perhaps somewhat rudimentary) way of checking that a puzzle has a unique solution.
+
+In our directory are contained the files helpers.py, Sudoku.py, Solve.py and puzzles.csv. 
+helpers contains some helper functions used in Sudoku.
+Sudoku implements the class Sudoku, together with methods which solve a given puzzle.
+The helpers file contains a number of sudokus in csv format and already includes two examples.
+The Solve file reads the puzzles.csv file, solves the puzzles, and prints the solutions to the terminal.
+
+Examples in puzzles.csv copied from the New York Times website puzzles on October 27, 2019. https://www.nytimes.com/crosswords/game/sudoku/hard.
