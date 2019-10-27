@@ -34,3 +34,5 @@ helpers contains some helper functions used in Sudoku.
 Sudoku implements the class Sudoku, together with methods which solve a given puzzle.
 The helpers file contains a number of sudokus in csv format and already includes two examples.
 The Solve file reads the puzzles.csv file, solves the puzzles, and prints the solutions to the terminal.
+
+Examples in puzzles.csv copied from the New York Times website puzzles on October 27, 2019. https://www.nytimes.com/crosswords/game/sudoku/hard.
