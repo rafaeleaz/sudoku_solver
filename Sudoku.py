@@ -4,19 +4,22 @@ import itertools
 
 class Sudoku:
 
-    def __init__(self, board=[["." for i in range(9)] for j in range(9)], marks=[[[str(n+1) for n in range(9)] for m in
-                                                                                  range(9)] for k in range(9)]):
+    def __init__(self, board=[["." for i in range(9)] for j in range(9)]):
         """
         Create an instance of a Sudoku puzzle, with 2-dimensional list board detailing the puzzle answers and
         3-dimensional list marks detailing the puzzle's pencil marks. The int answers records the number of tiles
         answered in the puzzle, and the boolean solved indicates the state of the puzzle (solved or unsolved).
 
         @param board: list[list[str]]
-        @param marks: list[list[list[str]]]
         @rtype: None
         """
+        if len(board) != 9:
+            raise IndexError("board must have 9 rows")
+        for row in board:
+            if len(row) != 9:
+                raise IndexError("all rows must have 9 columns")
         self.board = board
-        self.marks = marks
+        self.marks =[[[str(n+1) for n in range(9)] for m in range(9)] for k in range(9)]
         self.answers = 0
         self.solved = False
         for row in self.board:
